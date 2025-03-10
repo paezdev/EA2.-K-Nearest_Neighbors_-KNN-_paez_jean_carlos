@@ -13,7 +13,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.12.1'
+        python-version: '3.10'  # Cambiado a 3.10 para mejor compatibilidad
 
     - name: Install dependencies
       run: |
@@ -34,7 +34,9 @@ jobs:
 
     - name: Execute Jupyter Notebook
       run: |
-        jupyter nbconvert --to notebook --execute notebooks/paez_ramirez_jean_carlos_KNN.ipynb --output notebooks/paez_ramirez_jean_carlos_KNN.ipynb --allow-errors
+        cd notebooks
+        jupyter nbconvert --to notebook --execute paez_ramirez_jean_carlos_KNN.ipynb --output paez_ramirez_jean_carlos_KNN.ipynb --allow-errors
+        cd ..
 
     - name: Commit changes
       run: |
