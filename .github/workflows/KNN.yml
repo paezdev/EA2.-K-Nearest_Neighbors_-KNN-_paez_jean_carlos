@@ -42,9 +42,9 @@ jobs:
     - name: Execute Jupyter Notebook
       run: |
         # Verificar que el notebook existe
-        if [ -f "notebooks/Apellido_Nombre_del_estudiante.ipynb" ]; then
+        if [ -f "notebooks/paez_ramirez_jean_carlos_KNN.ipynb" ]; then
           echo "Notebook encontrado. Ejecutando..."
-          jupyter nbconvert --to notebook --execute notebooks/Apellido_Nombre_del_estudiante.ipynb --output notebooks/Apellido_Nombre_del_estudiante.ipynb --allow-errors
+          jupyter nbconvert --to notebook --execute notebooks/paez_ramirez_jean_carlos_KNN.ipynb --output notebooks/paez_ramirez_jean_carlos_KNN.ipynb --allow-errors
         else
           echo "Error: El notebook no existe en la ruta especificada."
           exit 1
